@@ -28,17 +28,20 @@ public class Main {
         tuna.info();
 
         EatingMeat tiger = new EatingMeat();
-        tiger.name();
-        tiger.move();
-        tiger.eat();
-        tiger.voice();
         tiger.isAlive = true;
+        tiger.swim = false;
+        if (tiger.isAlive) {
+            tiger.move();
+            tiger.eat();
+            tiger.voice();
+        }
 
         EatingGrass elephant = new EatingGrass();
-        elephant.name();
+        elephant.isAlive = true;
+        elephant.swim = true;
         elephant.move();
         elephant.eat();
         elephant.voice();
-        elephant.isAlive = true;
+
     }
 }
